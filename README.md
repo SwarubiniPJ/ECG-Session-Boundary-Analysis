@@ -115,7 +115,7 @@ python src/feature_engineering/build_master_csv.py
 
 Do not commit a configuration containing personal absolute paths. Keep `config.py` local and commit only `config.example.py`.
 
-### 2. Validate the V4 environment and input table
+### 2. Validate the environment and input table
 
 ```bash
 python validation/validate_installation.py \
@@ -124,12 +124,12 @@ python validation/validate_installation.py \
 python validation/validate_population_timing.py
 ```
 
-### 3. Run the final V4 analysis
+### 3. Run the final analysis
 
 ```bash
 bash scripts/run_timing_v4.sh \
   "/absolute/path/to/Master_ECG_HRV_Features.csv" \
-  "/absolute/path/to/Nature_Timing_Validated_Results_V4"
+  "/absolute/path/to/Nature_Timing_Validated_Results"
 ```
 
 The full manuscript run evaluates 30-, 45-, and 60-s windows; RR-correction thresholds of 5%, 10%, and 20%; matched pseudo-boundaries; simulations; participant bootstrap and permutation inference; alternative feature representations; multiple change-point methods; sequence position; and end-to-end participant omission.
@@ -138,7 +138,7 @@ The full manuscript run evaluates 30-, 45-, and 60-s windows; RR-correction thre
 
 ```bash
 python scripts/prepare_data_from_v4_zip.py \
-  --source "/absolute/path/to/Nature_Timing_Validated_Results_V4.zip" \
+  --source "/absolute/path/to/Nature_Timing_Validated_Results.zip" \
   --output-dir data/derived/manuscript
 
 python scripts/generate_all_figures_standardized.py \
@@ -173,12 +173,8 @@ See `docs/REPRODUCIBILITY.md`.
 
 A `CITATION.cff` file is included. Replace the repository URL, release version, DOI, and publication DOI before making the archival release.
 
-## License
-
-Select a code license with the corresponding author and institution before public release. MIT and BSD-3-Clause are common choices for academic analysis code. See `LICENSE_CHOICE.md`.
-
 ## Contact
 
-- Swarubini P J
-- Mohamed Elgendi, Khalifa University
+- Swarubini P J, Khalifa University (swarubinipj@gmail.com)
+- Mohamed Elgendi, Khalifa University (moe.elgendi@ku.ac.ae)
 
