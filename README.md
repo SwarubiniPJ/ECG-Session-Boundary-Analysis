@@ -62,18 +62,9 @@ The repository uses the term **session-boundary-associated cardiovascular change
 │   ├── manuscript/                  # small machine-readable result tables
 │   └── full_run/                    # not committed; archive externally
 ├── figures/
-│   ├── main/
-│   └── supplementary/
-├── manuscript/                      # optional during peer review
-│   ├── sections/
-│   ├── tables/
-│   └── references/
-└── docs/
-    ├── REPRODUCIBILITY.md
-    ├── DATA_DICTIONARY.md
-    ├── FIGURE_TABLE_MANIFEST.csv
-    ├── METHODS.md
-    └── CHANGELOG.md
+   ├── main/
+   └── supplementary/
+
 ```
 
 ## Data
